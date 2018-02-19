@@ -1,0 +1,13 @@
+/*C12*/SET SCHEMA PUBLIC
+drop table employees_info if exists
+drop sequence hibernate_sequence
+create sequence hibernate_sequence start with 1 increment by 1
+create table employees_info (id bigint not null, address varchar(255), age integer not null, email varchar(255), name varchar(255), salary double not null, primary key (id))
+INSERT INTO EMPLOYEES_INFO VALUES(10,'Sarajevo-1',30,'Employee1@hotmail.com','Employee1',2000.9E0)
+INSERT INTO EMPLOYEES_INFO VALUES(11,'Sarajevo-2',25,'Employee2@hotmail.com','Employee2',1500.0E0)
+INSERT INTO EMPLOYEES_INFO VALUES(12,'Sarajevo-3',41,'Employee3@hotmail.com','Employee3',1000.32E0)
+INSERT INTO EMPLOYEES_INFO VALUES(13,'Sarajevo-4',54,'Employee4@hotmail.com','Employee4',1200.0E0)
+INSERT INTO EMPLOYEES_INFO VALUES(14,'Sarajevo-5',22,'Employee5@hotmail.com','Employee5',2500.0E0)
+INSERT INTO EMPLOYEES_INFO VALUES(15,'Sarajevo-6',31,'Employee6@hotmail.com','Employee6',1700.0E0)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 2
+COMMIT
